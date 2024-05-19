@@ -1,0 +1,113 @@
+:root {
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey: hsl(0, 0%, 20%);
+  --clr-dark-grey: hsl(0, 0%, 12%);
+  --clr-off-black: hsl(0, 0%, 8%);
+
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-extra-bold: 700;
+
+  --ff-base: "Inter", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 14px;
+  color: var(--clr-white);
+  background-color: var(--clr-off-black);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 2rem;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+.container {
+  max-width: 385px;
+  margin: 0 auto;
+}
+.box {
+  padding: 2rem;
+  border-radius: 14px;
+  background-color: var(--clr-dark-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.img-top {
+  max-width: 85px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+}
+.introduction .intro-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.intro-text h1 {
+  margin-bottom: 6px;
+  text-align: center;
+}
+.intro-text .green-text {
+  color: var(--clr-green);
+  font-weight: var(--fw-bold);
+  margin-bottom: 25px;
+}
+.intro-text p {
+  margin-bottom: 1rem;
+}
+.socials {
+  display: grid;
+  margin-top: 0.5rem;
+  text-align: center;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+.socials a {
+  display: block;
+  color: var(--clr-white);
+  background-color: var(--clr-grey);
+  padding-block: 0.8rem;
+  padding-inline: 6rem;
+  border-radius: 0.5rem;
+  font-weight: var(--fw-extra-bold);
+  transition: all 0.25s linear;
+  text-decoration: none;
+}
+.socials a:hover {
+  background-color: var(--clr-green);
+  color: var(--clr-off-black);
+  cursor: pointer;
+}
+
+@media (max-width: 435px) {
+  .socials li a {
+    padding-inline: 3.5rem;
+  }
+}
